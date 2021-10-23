@@ -11,9 +11,9 @@ import org.apache.commons.math3.linear.RealVector;
 @Getter
 public class ApplicationState extends AbstractApplicationState {
 
-    private final String system = "\n  /\u203E sin(x - 0.6) - y = 1.6\n"
+    private final String system = "\n  /\u203E  sin(x - 0.6) - y = 1.6\n"
                                 +"<\n"
-                                +"  \\_3x - cos(y) = 0.9";
+                                +"  \\_  3x - cos(y) = 0.9";
 
     private RealVector initialApproximation = new ArrayRealVector(new double[] {1.4, 0.5});
 

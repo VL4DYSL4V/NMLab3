@@ -34,11 +34,14 @@ public class RunCommand extends AbstractRunnableCommand {
     private RealVector solve(RealVector initialApproximation, double precision) {
         RealVector current = initialApproximation.copy();
         RealVector previous;
+        int iterationCount = 0;
         do {
             RealVector newSolution = computeNewSolution(current);
             previous = current;
             current = newSolution;
+            iterationCount++;
         } while (current.subtract(previous).getNorm() >= precision);
+        ConsoleUtils.println(String.format("Iteration count: %d", iterationCount));
         return current;
     }
 
