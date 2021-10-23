@@ -22,9 +22,9 @@ public class ApplicationState extends AbstractApplicationState {
     @Override
     protected void initVariableNameToSettersMap() {
         variableNameToSetter.put("precision", StateHelper
-                .getDefaultSetter("precision", Double.class, o -> (Double) o, this::setPrecision));
+                .getDefaultSetter("precision", Double.class, this::setPrecision));
         variableNameToSetter.put("initial-approximation", StateHelper
-                .getDefaultSetter("initial-approximation", RealVector.class, o -> (RealVector) o, this::setInitialApproximation));
+                .getDefaultSetter("initial-approximation", RealVector.class, this::setInitialApproximation));
     }
 
     @Override
